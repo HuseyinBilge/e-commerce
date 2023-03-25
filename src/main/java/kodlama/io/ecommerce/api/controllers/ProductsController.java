@@ -1,20 +1,18 @@
 package kodlama.io.ecommerce.api.controllers;
 
 import kodlama.io.ecommerce.business.abstracts.ProductService;
-import kodlama.io.ecommerce.entities.concretes.Product;
+import kodlama.io.ecommerce.entities.Product;
+import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
+@AllArgsConstructor
 @RequestMapping("/api/products")
 public class ProductsController {
     private final ProductService productService;
-
-    public ProductsController(ProductService productService) {
-        this.productService = productService;
-    }
 
     @GetMapping
     public List<Product> getAll() {
