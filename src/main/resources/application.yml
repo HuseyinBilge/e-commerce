@@ -19,7 +19,7 @@ spring:
           starttls:
             enable: 'true'
           auth: 'true'
-    password: efcqpikwwqocweyt
+    password: deleted
   datasource:
     password: '12345'
     username: postgres
