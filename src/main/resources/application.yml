@@ -1,0 +1,28 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+      javax:
+        persistence:
+          validation:
+            mode: none
+    hibernate:
+      ddl-auto: update
+  mail:
+    host: smtp.gmail.com
+    username: huseyinb494@gmail.com
+    port: '587'
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    password: efcqpikwwqocweyt
+  datasource:
+    password: '12345'
+    username: postgres
+    url: jdbc:postgresql://localhost:5432/ecommercedb
+server:
+  port: '8090'

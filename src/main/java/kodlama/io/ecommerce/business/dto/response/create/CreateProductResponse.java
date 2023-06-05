@@ -1,37 +1,25 @@
-package kodlama.io.ecommerce.entities;
+package kodlama.io.ecommerce.business.dto.response.create;
 
-import jakarta.persistence.*;
+import kodlama.io.ecommerce.entities.Category;
 import kodlama.io.ecommerce.entities.enums.Activeness;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
 import java.util.UUID;
 
-import static jakarta.persistence.EnumType.STRING;
-
-@Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "products")
-public class Product {
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
+public class CreateProductResponse {
     private UUID id;
     private String name;
     private double price;
     private String description;
-    private int stockAmount;
-    @Enumerated(value = STRING)
     private Activeness activeness;
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
-
-
+    private int stockAmount;
+    private UUID categoryId;
+    private String categoryName;
 }
